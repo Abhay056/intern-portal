@@ -22,9 +22,6 @@ connection.once('open', () => {
 
 const Intern = require('./models/intern.model');
 
-// --- API ROUTES ---
-
-// GET: Fetch a specific intern's data for the dashboard
 app.get('/api/interns/:id', async (req, res) => {
     try {
         const intern = await Intern.findById(req.params.id);
@@ -50,9 +47,6 @@ app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
 });
 
-
-// --- DUMMY DATA SEEDING ---
-// This function runs once on startup to ensure you have data to work with.
 async function seedDatabase() {
     const internCount = await Intern.countDocuments();
     if (internCount === 0) {

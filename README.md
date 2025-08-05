@@ -30,8 +30,10 @@ cd backend && npm install
 cd ../frontend && npm install
 ```
 - Start the backend development server:
+```
 cd backend && npm start
 ```
 - Start the frontend development server:
 ```
 cd frontend && npm start
+```
